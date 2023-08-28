@@ -1,17 +1,15 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import {Theme} from "../../mui/theme";
-import {ThemeProvider} from "@mui/material";
+import {Typography} from "@mui/material";
 
 export default function Home() {
   return (
-      <ThemeProvider theme={Theme}>
     <main className={styles.main}>
-      <p style={{fontFamily: 'Inter, sans-serif'}}>Test</p>
+      <Typography>YOLOO</Typography>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          <code className={styles.code}>app/page.tsx</code>
         </p>
         <div>
           <a
@@ -95,6 +93,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-      </ThemeProvider>
   )
 }
