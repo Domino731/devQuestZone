@@ -5,40 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3010ef6-4632-4944-b12b-8de47b9a035e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/devquestzone/theme/EmotionCache.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/devquestzone/theme/ThemeRegistry.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Text/Text.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Text/Text.types.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Text/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.client.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entry.server.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mui/darkTheme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mui/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mui/lightTheme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/_index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/mui/theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/devquestzone/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/devquestzone/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/devquestzone/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/src/app/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/src/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devquestzone/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/devquestzone/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remix.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/remix.env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/choose-topic/[topic]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/topic/[topic]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TypeCard/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/AllRoadmaps/AllRoadmaps.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/AllRoadmaps/AllRoadmaps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/AllRoadmaps/AllRoadmaps.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/AllRoadmaps/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/app/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/app/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/app/page.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/public/next.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/theme/EmotionCache.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/theme/ThemeRegistry.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/devquestzone/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +44,9 @@
         <option value="TypeScript JSX File" />
       </list>
     </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,20 +62,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Dominik\\Desktop\\projects\\devQuestZone\\devquestzone\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Dominik\\Desktop\\projects\\devQuestZone\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="devQuestZone" />
@@ -112,7 +112,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693247667265</updated>
-      <workItem from="1693247669073" duration="936000" />
+      <workItem from="1693247669073" duration="1086000" />
+      <workItem from="1693249935736" duration="3218000" />
+      <workItem from="1693741495413" duration="2111000" />
     </task>
     <servers />
   </component>
@@ -129,5 +131,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/devQuestZone$main.coverage" NAME="main Coverage Results" MODIFIED="1693741650101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
