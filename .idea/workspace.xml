@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3010ef6-4632-4944-b12b-8de47b9a035e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/Question/Question.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Question/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/Question/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/Question/CodeSnippet.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/Question/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/modules/Question/Question.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/ThemeRegistry.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/theme/ThemeRegistry.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +105,7 @@
       <workItem from="1694940829010" duration="8000" />
       <workItem from="1694941034703" duration="39000" />
       <workItem from="1699730384606" duration="207000" />
-      <workItem from="1699730608594" duration="2803000" />
+      <workItem from="1699730608594" duration="3234000" />
     </task>
     <servers />
   </component>

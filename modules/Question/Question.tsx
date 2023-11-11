@@ -2,6 +2,8 @@ import styles from "./styles.module.scss"
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
+import CodeSnippet from "@/modules/Question/CodeSnippet";
+
 
 const contentSX = {
     fontSize: "100px",
@@ -53,15 +55,7 @@ export const Question = () => {
                     </p>
 
                     <div>
-                        {`javascript
-   function outer() {
-     function inner() {
-       console.log(this); // Refers to the global object (window in a browser)
-     }
-     inner();
-   }
-   outer();
-   `}
+                        <CodeSnippet/>
                     </div>
 
                 </li>
