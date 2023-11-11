@@ -5,11 +5,13 @@ import {Header} from "@/modules/Header/Header";
 import {Container} from "@mui/system";
 import {TypeCard} from "@/components/TypeCard";
 import {AllRoadmaps} from "@/modules/AllRoadmaps";
+import {Question} from "@/modules/Question";
 
 export default function Home() {
     return (
         <main>
-            <AllRoadmaps/>
+            {/*<AllRoadmaps/>*/}
+            <Question/>
         </main>
     )
 }

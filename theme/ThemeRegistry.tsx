@@ -43,6 +43,9 @@ const themeOptions: ThemeOptions = {
             },
         },
     },
+    palette: {
+        mode: 'dark',
+    },
 }
 
 const theme = createTheme(themeOptions);
