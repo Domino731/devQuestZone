@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  pre {
+    margin: 0;
+  }
+}
+
+.header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
