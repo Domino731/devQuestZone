@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import {CodeSnippet} from "@/modules/Question/CodeSnippet";
+import {CodeSnippet} from "./CodeSnippet.tsx";
 
 
 const contentSX = {

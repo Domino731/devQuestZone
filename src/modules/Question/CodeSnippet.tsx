@@ -1,9 +1,5 @@
-"use client";
-// components/CodeHighlighter.js
-
-import React from 'react';
 import hljs from 'highlight.js';
-// Import the language you need (e.g., javascript)
+
 import javascript from 'highlight.js/lib/languages/javascript';
 
 // Register the language
