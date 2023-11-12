@@ -15,7 +15,8 @@
     "@mui/material": "^5.14.17",
     "highlight.js": "^11.9.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

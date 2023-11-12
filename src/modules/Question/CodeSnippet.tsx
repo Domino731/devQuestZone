@@ -1,6 +1,8 @@
 import hljs from 'highlight.js';
 
 import javascript from 'highlight.js/lib/languages/javascript';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 // Register the language
 hljs.registerLanguage('javascript', javascript);
@@ -8,12 +10,7 @@ export const CodeSnippet = () => {
 
 
     return (
-        <pre>
-            <button onClick={() => {
-                hljs.highlightAll()
-                console.log(12);
-            }}>test</button>
-      <code className='javascript'>
+<SyntaxHighlighter language="javascript" style={docco}>
        {
            `
 export function useWeb3AnalyticsReporter() {
@@ -26,10 +23,6 @@ export function useWeb3AnalyticsReporter() {
   }, [pathname, search]);
 
   //track web3 activity
-
-
-
-  12345677890-
   useEffect(() => {
     if (provider) {
       Web3Analytics.walletProvider(provider);
@@ -37,7 +30,6 @@ export function useWeb3AnalyticsReporter() {
   }, [provider]);
 }`
        }
-      </code>
-    </pre>
+</SyntaxHighlighter>
     );
 };
