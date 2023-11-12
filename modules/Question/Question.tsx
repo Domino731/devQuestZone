@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import CodeSnippet from "@/modules/Question/CodeSnippet";
+import {CodeSnippet} from "@/modules/Question/CodeSnippet";
 
 
 const contentSX = {
@@ -25,6 +25,7 @@ const contentSX = {
 }
 
 export const Question = () => {
+    console.log(123);
     return <div className={styles.container}>
         <header>
             <Typography variant="h4" gutterBottom>

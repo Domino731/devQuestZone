@@ -1,23 +1,25 @@
-"use client"
-import hljs from "highlight.js/lib/core";
-import javascript from "highlight.js/lib/languages/javascript";
-import "highlight.js/styles/monokai.css";
+"use client";
+// components/CodeHighlighter.js
 
-import {useEffect, useRef} from "react";
+import React from 'react';
+import hljs from 'highlight.js';
+// Import the language you need (e.g., javascript)
+import javascript from 'highlight.js/lib/languages/javascript';
 
-hljs.registerLanguage("javascript", javascript);
+// Register the language
+hljs.registerLanguage('javascript', javascript);
+export const CodeSnippet = () => {
 
-const CodeSnippet = () => {
-    const codeRef = useRef(null);
-
-    useEffect(() => {
-        hljs.highlightBlock(codeRef.current);
-    }, []);
 
     return (
         <pre>
-      <code className="javascript" style={{background: "transparent"}} ref={codeRef}>
-        {`
+            <button onClick={() => {
+                hljs.highlightAll()
+                console.log(12);
+            }}>test</button>
+      <code className='javascript'>
+       {
+           `
 export function useWeb3AnalyticsReporter() {
   const { pathname, search } = useLocation(); //depends on project routes manager 
   const { provider } = useWeb3React(); //depends on project web3 providers handling
@@ -37,10 +39,9 @@ export function useWeb3AnalyticsReporter() {
       Web3Analytics.walletProvider(provider);
     }
   }, [provider]);
-}`}
+}`
+       }
       </code>
     </pre>
     );
 };
-
-export default CodeSnippet;
