@@ -21,6 +21,38 @@ const contentSX = {
     ".list-item-title": {
         color: "white",
         fontWeight: 'bold'
+    },
+   ".text-block": {
+  display:"block",
+  marginTop: "16px",
+  marginBottom: "16px",
+  fontSize: "16px"
+},
+
+    ".code": {
+        background: '#2F3A46',
+        color: "white",
+        fontSize: "1em",
+        padding: "0.1em 0.4em",
+        borderRadius: "0.4em",
+        border: "1px solid  #3B4A59"
+    },
+    ".code-link": {
+        background: '#2F3A46',
+        color: "white",
+        fontSize: "1em",
+        padding: "0 0.4em",
+        borderRadius: "0.4em",
+        border: "1px solid  #3B4A59",
+
+        a: {
+            color: "inherit",
+            textDecoration: 'underline',
+            transition: "0.2s",
+            "&:hover": {
+                opacity: 0.6
+            }
+        }
     }
 }
 
@@ -35,17 +67,17 @@ export const Question = () => {
         </header>
         <Divider/>
         <Box sx={contentSX}>
-            <div className="element">
+            <p className="text-block">
                 The value of {`this`} in a function {`that's`} defined within another function, known as a nested
                 function,
                 is determined based on the rules for the value of {`this`} within the context in which the nested
                 function
                 is called.
-            </div>
+            </p>
 
             <ul className="list">
                 <li>
-                    <p>
+                    <p className="text-block">
                         1. <span className="list-item-title">Global Scope</span>: If the nested function is called in
                         the global scope (outside of any other
                         function or
@@ -61,6 +93,11 @@ export const Question = () => {
 
                 </li>
             </ul>
+
+            <p className="text-block">
+                Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur adipisicing elit. Dicta, numquam?
+                <code className="code-link"><a href="/test123">document.querySelector()</a></code>
+            </p>
         </Box>
     </div>
 }
