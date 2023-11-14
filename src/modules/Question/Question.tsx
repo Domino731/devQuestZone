@@ -4,6 +4,7 @@ import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import {CodeSnippet} from "./components/CodeSnippet/CodeSnippet.tsx";
 import {exampleCode} from "./Question.const.ts";
+import {getLangColor} from "../../utils/getLangColor.ts";
 
 
 const contentSX = {
@@ -59,7 +60,7 @@ const contentSX = {
 
 export const Question = () => {
     console.log(123);
-    return <div className={styles.container}>
+    return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>
         <header>
             <Typography variant="h4" gutterBottom>
                 Explain flux architecture in terms of react redux library. Do you know other libraries for state
@@ -101,5 +102,5 @@ export const Question = () => {
                 <code className="code-link"><a href="/test123">document.querySelector()</a></code>
             </p>
         </Box>
-    </div>
+    </Box>
 }

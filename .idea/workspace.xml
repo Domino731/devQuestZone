@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1520b14d-857d-4e7d-bf2a-8ecd65bbc907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Header/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/QuestionsList/QuestionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/QuestionsList/QuestionList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/Question.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699798466748</updated>
       <workItem from="1699798471145" duration="4657000" />
-      <workItem from="1699979168982" duration="2833000" />
+      <workItem from="1699979168982" duration="3136000" />
     </task>
     <servers />
   </component>
