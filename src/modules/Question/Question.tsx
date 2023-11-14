@@ -3,6 +3,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import {CodeSnippet} from "./components/CodeSnippet/CodeSnippet.tsx";
+import {exampleCode} from "./Question.const.ts";
 
 
 const contentSX = {
@@ -22,12 +23,12 @@ const contentSX = {
         color: "white",
         fontWeight: 'bold'
     },
-   ".text-block": {
-  display:"block",
-  marginTop: "16px",
-  marginBottom: "16px",
-  fontSize: "16px"
-},
+    ".text-block": {
+        display: "block",
+        marginTop: "16px",
+        marginBottom: "16px",
+        fontSize: "16px"
+    },
 
     ".code": {
         background: '#2F3A46',
@@ -88,14 +89,15 @@ export const Question = () => {
                     </p>
 
                     <div>
-                        <CodeSnippet/>
+                        <CodeSnippet lang="javascript" code={exampleCode}/>
                     </div>
 
                 </li>
             </ul>
 
             <p className="text-block">
-                Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur adipisicing elit. Dicta, numquam?
+                Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur
+                adipisicing elit. Dicta, numquam?
                 <code className="code-link"><a href="/test123">document.querySelector()</a></code>
             </p>
         </Box>

@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1520b14d-857d-4e7d-bf2a-8ecd65bbc907" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/modules/Question/Question.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Question/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/Question.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Question/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,11 +40,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Dominik/Desktop/projects/devQuestZone",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "C:\\Users\\Dominik\\Desktop\\projects\\devQuestZone\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -57,7 +65,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699798466748</updated>
-      <workItem from="1699798471145" duration="4553000" />
+      <workItem from="1699798471145" duration="4657000" />
+      <workItem from="1699979168982" duration="864000" />
     </task>
     <servers />
   </component>
