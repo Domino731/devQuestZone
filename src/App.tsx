@@ -1,29 +1,34 @@
-import {Question} from "./modules/Question";
-import {QuestionList} from "./modules/QuestionsList";
 import CssBaseline from '@mui/material/CssBaseline';
 import './App.css'
-import {firestore} from "./firebase/config.ts";
-import {doc, getDoc} from "firebase/firestore";
-import {useEffect} from "react";
-import {collection, getDocs} from "firebase/firestore";
+import {HomePage} from "./modules/homePage";
+import {RouterProvider} from "react-router";
+import {createBrowserRouter} from "react-router-dom";
+import {APP_LINKS} from "./App.const.ts";
+import {SectionsList} from "./modules/SectionsList";
+import {Provider} from "react-redux";
+import {store} from "./store.ts";
+
+const router = createBrowserRouter([
+    {
+        path: APP_LINKS.homePage,
+        element: <HomePage/>,
+    },
+    {
+        path: APP_LINKS.sectionsListJavascript,
+        element: <SectionsList sectionList="JAVASCRIPT"/>,
+    },
+    {
+        path: APP_LINKS.sectionsListReact,
+        element: <SectionsList sectionList="REACT"/>,
+    },
+]);
 
 function App() {
-    useEffect(() => {
-        const test = async () => {
-            const querySnapshot = await getDocs(collection(firestore, "javascript"));
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
-            });
-        }
-        test();
-    }, [])
     return (
         <CssBaseline>
-            <div style={{display: 'flex'}}>
-                <QuestionList/>
-                <Question/>
-            </div>
+            <Provider store={store}>
+                <RouterProvider router={router}/>
+            </Provider>
         </CssBaseline>
     )
 }
