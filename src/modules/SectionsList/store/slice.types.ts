@@ -1,5 +1,10 @@
 export type SectionListItemData = {
     name: string;
     docId: string;
-    subSections: null;
+    subSections: null | Array<SectionListSubSectionData>;
+}
+
+export type SectionListSubSectionData = {
+    name: string;
+    docId: string;
 }

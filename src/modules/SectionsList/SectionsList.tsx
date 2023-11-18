@@ -39,6 +39,7 @@ export const SectionsList = ({sectionList}: SectionListProps) => {
                         expandIcon={<ExpandMoreIcon/>}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
+                        onClick={() => dispatch(sectionListActions.fetchSubSectionsList(sectionList, docId))}
                     >
                         <Typography>{name}</Typography>
                     </AccordionSummary>

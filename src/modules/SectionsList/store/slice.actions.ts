@@ -9,13 +9,23 @@ const fetchSectionsList = (sectionKey: SectionListUnion) => async (dispatch: App
     try {
         const data = await sectionsListServices.fetchSections();
         dispatch(sectionListSliceActions.setSectionsData({sectionKey, data}));
-    } catch (error) {
+    } catch (e) {
         // TODO handle error (maybe notification?)
-        console.log("ERROR!: ", error);
+        console.log("ERROR!: ", e);
     }
     dispatch(sectionListSliceActions.setIsLoading({sectionKey, isLoading: false}));
 };
 
+const fetchSubSectionsList = (sectionKey: SectionListUnion, sectionId: string) => async (dispatch: AppDispatch) => {
+    try {
+        const data = await sectionsListServices.fetchSubSections(sectionId);
+        dispatch(sectionListSliceActions.setSubSectionsData({sectionKey, sectionId, data}))
+    } catch (e) {
+        // TODO handle error (maybe notification?)
+        console.log("ERROR!: ", e);
+    }
+};
+
 export const sectionListActions = {
-    fetchSectionsList
+    fetchSectionsList, fetchSubSectionsList
 }

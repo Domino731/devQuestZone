@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 import {SECTION_LIST, SectionListUnion} from "../SectionsList.types.ts";
-import {SectionListItemData} from "./slice.types.ts";
+import {SectionListItemData, SectionListSubSectionData} from "./slice.types.ts";
 
 export interface SectionsListState {
     isLoading: Record<SectionListUnion, boolean>;
@@ -33,6 +33,17 @@ const counterSlice = createSlice({
         }>) => {
             state.sections[action.payload.sectionKey] = action.payload.data
         },
+        setSubSectionsData: (state, action: PayloadAction<{
+            sectionKey: SectionListUnion,
+            sectionId: string,
+            data: Array<SectionListSubSectionData>
+        }>) => {
+            const {sectionId, sectionKey, data} = action.payload;
+            const sections = state.sections[sectionKey];
+            if (!sections) return;
+            const sectionIndex = sections.findIndex(({docId}) => docId === sectionId);
+            state.sections[sectionKey][sectionIndex].subSections = data;
+        }
     },
 })
 
