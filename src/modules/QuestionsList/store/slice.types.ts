@@ -1,3 +1,5 @@
+import {AppLanguagesUnion} from "../../../app.types.ts";
+
 export interface QuestionListState {
     isLoading: boolean;
     questions: Array<QuestionData> | null;
@@ -11,4 +13,12 @@ export type QuestionData = {
 }
 export type Question = {
     name: string;
+    answer: QuestionAnswer
+}
+
+export type QuestionAnswer = Array<string | QuestionCodeSnippet>;
+
+export type QuestionCodeSnippet = {
+    lang: AppLanguagesUnion;
+    code: string;
 }

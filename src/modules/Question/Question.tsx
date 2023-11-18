@@ -13,6 +13,7 @@ import {questionListActions} from "../QuestionsList/store/slice.actions.ts";
 import {useAppDispatch, useAppSelector} from "../../store.ts";
 import {contentSX} from "./Question.styles.ts";
 import {questionListSelectors} from "../QuestionsList/store/slice.selectors.ts";
+import {Answer} from "./components/Answer";
 
 export const Question = ({id}: QuestionProps) => {
     const params = useParams();
@@ -46,34 +47,7 @@ export const Question = ({id}: QuestionProps) => {
         </header>
         <Divider/>
         <Box sx={contentSX}>
-            <div className="text-block">
-                The value of {`this`} in a function {`that's`} defined within another function, known as a nested
-                function,
-                is determined based on the rules for the value of {`this`} within the context in which the nested
-                function
-                is called.
-            </div>
-
-            <div className="text-block">
-                1. <span className="list-item-title">Global Scope</span>: If the nested function is called in
-                the global scope (outside of any other
-                function or
-                object), the value of {`this`} within the nested function will typically refer to the global
-                object.
-                In a
-                web browser, the global object is usually the `window` object.
-            </div>
-
-
-            <CodeSnippet lang="javascript" code={question.answer[1].code}/>
-
-            <div className="text-block">
-                Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur
-                adipisicing elit. Dicta, numquam?
-                <code className="code-link"><a href="/test123">document.querySelector()</a></code>
-            </div>
-
-
+            <Answer answer={question.answer}/>
         </Box>
     </Box>
 }
