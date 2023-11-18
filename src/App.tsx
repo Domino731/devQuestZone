@@ -7,6 +7,8 @@ import {APP_LINKS} from "./App.const.ts";
 import {SectionsList} from "./modules/SectionsList";
 import {Provider} from "react-redux";
 import {store} from "./store.ts";
+import {SECTION_LIST} from "./modules/SectionsList/SectionsList.types.ts";
+import {QuestionList} from "./modules/QuestionsList";
 
 const router = createBrowserRouter([
     {
@@ -15,11 +17,15 @@ const router = createBrowserRouter([
     },
     {
         path: APP_LINKS.sectionsListJavascript,
-        element: <SectionsList sectionKey="JAVASCRIPT"/>,
+        element: <SectionsList sectionKey={SECTION_LIST.JAVASCRIPT}/>,
     },
     {
         path: APP_LINKS.sectionsListReact,
-        element: <SectionsList sectionKey="REACT"/>,
+        element: <SectionsList sectionKey={SECTION_LIST.REACT}/>,
+    },
+    {
+        path: APP_LINKS.questionsListJavascript,
+        element: <QuestionList sectionKey={SECTION_LIST.JAVASCRIPT}/>,
     },
 ]);
 

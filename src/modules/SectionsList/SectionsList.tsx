@@ -12,6 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './styles.module.scss';
 import {SectionListSubSectionData} from "./store/slice.types.ts";
 import {Link} from "react-router-dom";
+import {APP_LINKS} from "../../App.const.ts";
 
 export const SectionsList = ({sectionKey}: SectionListProps) => {
     const dispatch = useAppDispatch();
@@ -24,9 +25,6 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
             dispatch(sectionListActions.fetchSectionsList(sectionKey));
         }
     }, [dispatch, isLoading, sectionKey, sectionsList])
-
-    console.log(sectionsList);
-    // console.log(isLoading);
 
     const getSubSections = useCallback((sectionId: string): Array<SectionListSubSectionData> | null => {
         if (!sectionsList) return null;
@@ -52,7 +50,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
                     color: 'white'
                 }
             }} key={docId}>
-                <Link to="test">
+                <Link to={APP_LINKS.buildQuestionListJavaScript(sectionId, docId)}>
                     <Typography>{name}</Typography>
                 </Link>
             </ListItem>)}

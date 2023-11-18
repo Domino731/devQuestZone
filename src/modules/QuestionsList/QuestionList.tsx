@@ -2,8 +2,23 @@ import styles from './styles.module.scss';
 import Box from "@mui/material/Box";
 import {Header} from "../Header";
 import Typography from "@mui/material/Typography";
+import {QuestionListProps} from "./QuestionList.types.ts";
+import {useParams} from "react-router";
+import {useEffect} from "react";
+import {useAppDispatch} from "../../store.ts";
+import {questionListActions} from "./store/slice.actions.ts";
+import {separeteIds} from "../../utils/router.ts";
 
-export const QuestionList = () => {
+export const QuestionList = ({sectionKey}: QuestionListProps) => {
+    const params = useParams();
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        // console.log(params);
+        const [sectionId, questionListId] = separeteIds(params.id as string);
+        dispatch(questionListActions.fetchSectionsList(sectionId, questionListId))
+    }, [dispatch, params.id, params.subSectionId, sectionKey])
+
     return <Box bgcolor="primary.main" className={styles.container}>
         <Header/>
         <ul className={styles.list}>
