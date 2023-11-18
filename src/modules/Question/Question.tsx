@@ -5,81 +5,58 @@ import Box from "@mui/material/Box";
 import {CodeSnippet} from "./components/CodeSnippet/CodeSnippet.tsx";
 import {exampleCode} from "./Question.const.ts";
 import {getLangColor} from "../../utils/getLangColor.ts";
+import {QuestionProps} from "./Question.types.ts";
+import {useParams} from "react-router";
+import {useEffect} from "react";
+import {separeteIds} from "../../utils/router.ts";
+import {questionListActions} from "../QuestionsList/store/slice.actions.ts";
+import {useAppDispatch, useAppSelector} from "../../store.ts";
+import {contentSX} from "./Question.styles.ts";
+import {questionListSelectors} from "../QuestionsList/store/slice.selectors.ts";
 
+export const Question = ({id}: QuestionProps) => {
+    const params = useParams();
+    const dispatch = useAppDispatch();
 
-const contentSX = {
-    fontSize: "100px",
-    marginTop: "24px",
-    color: 'text.secondary',
-    ".element": {
-        fontSize: "0.16em"
-    },
-    ".list": {
-        fontSize: "0.16em"
-    },
-    ".text": {
-        fontSize: "0.16em"
-    },
-    ".list-item-title": {
-        color: "white",
-        fontWeight: 'bold'
-    },
-    ".text-block": {
-        display: "block",
-        marginTop: "16px",
-        marginBottom: "16px",
-        fontSize: "16px"
-    },
+    const questionIsLoading = useAppSelector(questionListSelectors.questionIsLoading);
+    const question = useAppSelector(questionListSelectors.question);
 
-    ".code": {
-        background: '#2F3A46',
-        color: "white",
-        fontSize: "1em",
-        padding: "0.1em 0.4em",
-        borderRadius: "0.4em",
-        border: "1px solid  #3B4A59"
-    },
-    ".code-link": {
-        background: '#2F3A46',
-        color: "white",
-        fontSize: "1em",
-        padding: "0 0.4em",
-        borderRadius: "0.4em",
-        border: "1px solid  #3B4A59",
-
-        a: {
-            color: "inherit",
-            textDecoration: 'underline',
-            transition: "0.2s",
-            "&:hover": {
-                opacity: 0.6
-            }
+    useEffect(() => {
+        if (!question && !questionIsLoading) {
+            const [sectionId, questionListId] = separeteIds(params.id as string);
+            dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
-    }
-}
+    }, [dispatch, id, params.id, question, questionIsLoading])
 
-export const Question = () => {
-    console.log(123);
+    if (questionIsLoading) {
+        // TODO all loader
+        return 'loading...'
+    }
+    if (!question) {
+        // TODO add 404 view
+        return '404 error'
+    }
+
+
     return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>
         <header>
             <Typography variant="h4" gutterBottom>
-                Explain flux architecture in terms of react redux library. Do you know other libraries for state
-                management for react?
+                {question.name}
             </Typography>
         </header>
         <Divider/>
         <Box sx={contentSX}>
-            <p className="text-block">
+            <div className="text-block">
                 The value of {`this`} in a function {`that's`} defined within another function, known as a nested
                 function,
                 is determined based on the rules for the value of {`this`} within the context in which the nested
                 function
                 is called.
-            </p>
+            </div>
 
-            <ul className="list">
-                <li>
-                    <p className="text-block">
+            <div className="list">
+                <div>
+                    <div className="text-block">
                         1. <span className="list-item-title">Global Scope</span>: If the nested function is called in
                         the global scope (outside of any other
                         function or
@@ -87,20 +64,20 @@ export const Question = () => {
                         object.
                         In a
                         web browser, the global object is usually the `window` object.
-                    </p>
+                    </div>
 
                     <div>
                         <CodeSnippet lang="javascript" code={exampleCode}/>
                     </div>
 
-                </li>
-            </ul>
+                </div>
+            </div>
 
-            <p className="text-block">
+            <div className="text-block">
                 Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur
                 adipisicing elit. Dicta, numquam?
                 <code className="code-link"><a href="/test123">document.querySelector()</a></code>
-            </p>
+            </div>
         </Box>
     </Box>
 }
