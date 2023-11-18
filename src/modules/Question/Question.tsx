@@ -22,11 +22,11 @@ export const Question = ({id}: QuestionProps) => {
     const question = useAppSelector(questionListSelectors.question);
 
     useEffect(() => {
-        if (!question && !questionIsLoading) {
-            const [sectionId, questionListId] = separeteIds(params.id as string);
-            dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
-        }
-    }, [dispatch, id, params.id, question, questionIsLoading])
+        // if (!question && !questionIsLoading) {
+        const [sectionId, questionListId] = separeteIds(params.id as string);
+        dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
+        // }
+    }, [])
 
     if (questionIsLoading) {
         // TODO all loader
@@ -54,30 +54,26 @@ export const Question = ({id}: QuestionProps) => {
                 is called.
             </div>
 
-            <div className="list">
-                <div>
-                    <div className="text-block">
-                        1. <span className="list-item-title">Global Scope</span>: If the nested function is called in
-                        the global scope (outside of any other
-                        function or
-                        object), the value of {`this`} within the nested function will typically refer to the global
-                        object.
-                        In a
-                        web browser, the global object is usually the `window` object.
-                    </div>
-
-                    <div>
-                        <CodeSnippet lang="javascript" code={exampleCode}/>
-                    </div>
-
-                </div>
+            <div className="text-block">
+                1. <span className="list-item-title">Global Scope</span>: If the nested function is called in
+                the global scope (outside of any other
+                function or
+                object), the value of {`this`} within the nested function will typically refer to the global
+                object.
+                In a
+                web browser, the global object is usually the `window` object.
             </div>
+
+
+            <CodeSnippet lang="javascript" code={question.answer[1].code}/>
 
             <div className="text-block">
                 Lorem ipsum dolor sit amet, <code className="code">document.querySelector()</code> consectetur
                 adipisicing elit. Dicta, numquam?
                 <code className="code-link"><a href="/test123">document.querySelector()</a></code>
             </div>
+
+
         </Box>
     </Box>
 }

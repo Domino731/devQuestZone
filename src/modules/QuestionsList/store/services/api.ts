@@ -22,9 +22,11 @@ const fetchQuestion = async (sectionId: string, questionListId: string, question
     let payload: Question | null = null;
 
     if (docSnap.exists()) {
-        const {name} = docSnap.data();
+        const {name, answer} = docSnap.data();
+        console.log(answer);
         payload = {
-            name
+            name,
+            answer: answer
         }
     } else {
         // docSnap.data() will be undefined in this case

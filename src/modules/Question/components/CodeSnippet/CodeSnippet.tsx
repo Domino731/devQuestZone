@@ -42,7 +42,7 @@ export const CodeSnippet = ({code, lang}: CodeSnippetProps) => {
             </Box>
             <div ref={ref}>
                 <SyntaxHighlighter language={lang} style={dracula}>
-                    {code}
+                    {code.replaceAll('\\n', '\n')}
                 </SyntaxHighlighter>
             </div>
         </div>
