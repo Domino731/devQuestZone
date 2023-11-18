@@ -15,11 +15,11 @@ const router = createBrowserRouter([
     },
     {
         path: APP_LINKS.sectionsListJavascript,
-        element: <SectionsList sectionList="JAVASCRIPT"/>,
+        element: <SectionsList sectionKey="JAVASCRIPT"/>,
     },
     {
         path: APP_LINKS.sectionsListReact,
-        element: <SectionsList sectionList="REACT"/>,
+        element: <SectionsList sectionKey="REACT"/>,
     },
 ]);
 

@@ -1,5 +1,5 @@
 export type SectionListProps = {
-    sectionList: SectionListUnion;
+    sectionKey: SectionListUnion;
 }
 
 export enum SECTION_LIST {

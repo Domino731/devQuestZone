@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1520b14d-857d-4e7d-bf2a-8ecd65bbc907" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/store/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/store/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/store/slice.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/styles.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,7 @@
       <workItem from="1699979168982" duration="5610000" />
       <workItem from="1700137846172" duration="6000" />
       <workItem from="1700148710256" duration="6455000" />
-      <workItem from="1700299504297" duration="2579000" />
+      <workItem from="1700299504297" duration="3367000" />
     </task>
     <servers />
   </component>

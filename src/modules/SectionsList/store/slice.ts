@@ -42,6 +42,8 @@ const counterSlice = createSlice({
             const sections = state.sections[sectionKey];
             if (!sections) return;
             const sectionIndex = sections.findIndex(({docId}) => docId === sectionId);
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
             state.sections[sectionKey][sectionIndex].subSections = data;
         }
     },
