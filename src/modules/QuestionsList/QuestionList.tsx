@@ -49,24 +49,41 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
         <div className={currentQuestionId ? styles.listWrapper : styles.listWrapperFullWidth}>
             <Header/>
             <ul className={styles.list}>
-                {[...questions, ...questions].map(({name, detailsDocId}) => {
+                {[...questions, ...questions].map(({name, detailsDocId}, index) => {
                     return <ListItem sx={{
                         padding: 0,
                         "a": {
+                            display: 'flex',
+                            alignItems: 'center',
                             width: '100%',
                             color: 'text.primary',
                             paddingTop: '12px',
                             paddingBottom: '12px',
-                            paddingLeft: '16px',
+                            paddingLeft: '4px',
                             paddingRight: '16px',
                             borderBottom: '2px solid',
-                            borderBottomColor: 'primary.light',
+                            borderBottomColor: detailsDocId === currentQuestionId ? 'secondary.light' : 'primary.light',
                             "&:hover": {
                                 borderBottomColor: 'secondary.dark'
+                            },
+                            "span": {
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                fontWeight: 'bold',
+                                fontSize: '16px',
+                                height: '24px',
+                                width: '24px',
+                                backgroundColor: detailsDocId === currentQuestionId ? 'secondary.light' : 'primary.light',
+                                borderRadius: '4px',
+                                marginRight: '12px',
+                                color: detailsDocId === currentQuestionId ? 'black' : 'white',
                             }
                         }
                     }} key={detailsDocId}>
+
                         <Link to={createQuestionLink(detailsDocId)}>
+                            <span>{index + 1}</span>
                             <Typography fontSize={16}>{name}</Typography>
                         </Link>
                     </ListItem>
