@@ -6,13 +6,22 @@
   justify-content: center;
 }
 
-.list {
+.listWrapper {
   width: 50%;
+}
+
+.listWrapperFullWidth {
+  width: 100%;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
+  width: 100%;
   list-style-type: none;
-  padding-right: 48px;
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
 }
 
 .listItemContent {

@@ -11,6 +11,7 @@ import {questionListSelectors} from "./store/slice.selectors.ts";
 import {List, ListItem} from "@mui/material";
 import {Link} from "react-router-dom";
 import {Question} from "../Question";
+import {Header} from "../Header";
 
 export const QuestionList = ({sectionKey}: QuestionListProps) => {
     const params = useParams();
@@ -45,16 +46,33 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
         return 'loading...'
     }
     return <Box bgcolor="primary.main" className={styles.container}>
-        {/*<Header/>*/}
-        <List className={styles.list}>
-            {questions.map(({name, detailsDocId}) => {
-                return <ListItem sx={{"a": {color: 'white'}}} key={detailsDocId}>
-                    <Link to={createQuestionLink(detailsDocId)}>
-                        <Typography>{name}</Typography>
-                    </Link>
-                </ListItem>
-            })}
-        </List>
+        <div className={currentQuestionId ? styles.listWrapper : styles.listWrapperFullWidth}>
+            <Header/>
+            <ul className={styles.list}>
+                {[...questions, ...questions].map(({name, detailsDocId}) => {
+                    return <ListItem sx={{
+                        padding: 0,
+                        "a": {
+                            width: '100%',
+                            color: 'text.primary',
+                            paddingTop: '12px',
+                            paddingBottom: '12px',
+                            paddingLeft: '16px',
+                            paddingRight: '16px',
+                            borderBottom: '2px solid',
+                            borderBottomColor: 'primary.light',
+                            "&:hover": {
+                                borderBottomColor: 'secondary.dark'
+                            }
+                        }
+                    }} key={detailsDocId}>
+                        <Link to={createQuestionLink(detailsDocId)}>
+                            <Typography fontSize={16}>{name}</Typography>
+                        </Link>
+                    </ListItem>
+                })}
+            </ul>
+        </div>
         {currentQuestionId && <Question id={currentQuestionId}/>}
 
     </Box>
