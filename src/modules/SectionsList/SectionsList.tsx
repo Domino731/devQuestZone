@@ -13,6 +13,8 @@ import styles from './styles.module.scss';
 import {SectionListSubSectionData} from "./store/slice.types.ts";
 import {Link} from "react-router-dom";
 import {APP_LINKS} from "../../App.const.ts";
+import {Header} from "../Header";
+import Box from "@mui/material/Box";
 
 export const SectionsList = ({sectionKey}: SectionListProps) => {
     const dispatch = useAppDispatch();
@@ -62,23 +64,28 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
         return 'loading...'
     }
 
-    return <Container className={styles.container}>
-        <ul className={styles.list}>
-            {sectionsList.map(({name, docId}) => <li className={styles.listItem} key={docId}>
-                <Accordion>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon/>}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                        onClick={() => handleFetchSubSections(docId)}
-                    >
-                        <Typography>{name}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        {SubSections(docId)}
-                    </AccordionDetails>
-                </Accordion>
-            </li>)}
-        </ul>
-    </Container>
+    return <Box className={styles.container} bgcolor="primary.main">
+        <Header/>
+        <main className={styles.listWrapper}>
+            <Container>
+                <ul className={styles.list}>
+                    {sectionsList.map(({name, docId}) => <li className={styles.listItem} key={docId}>
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon/>}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                onClick={() => handleFetchSubSections(docId)}
+                            >
+                                <Typography>{name}</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                {SubSections(docId)}
+                            </AccordionDetails>
+                        </Accordion>
+                    </li>)}
+                </ul>
+            </Container>
+        </main>
+    </Box>
 }

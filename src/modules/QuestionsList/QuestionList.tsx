@@ -8,7 +8,7 @@ import {useAppDispatch, useAppSelector} from "../../store.ts";
 import {questionListActions} from "./store/slice.actions.ts";
 import {separeteIds} from "../../utils/router.ts";
 import {questionListSelectors} from "./store/slice.selectors.ts";
-import {List, ListItem} from "@mui/material";
+import {ListItem} from "@mui/material";
 import {Link} from "react-router-dom";
 import {Question} from "../Question";
 import {Header} from "../Header";
