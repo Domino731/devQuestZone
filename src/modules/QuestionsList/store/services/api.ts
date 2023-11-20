@@ -26,7 +26,7 @@ const fetchQuestion = async (sectionId: string, questionListId: string, question
         payload = {
             name,
             answerShort,
-            answerLong
+            answerLong: answerLong ?? null
         }
     } else {
         console.log("No such document!");

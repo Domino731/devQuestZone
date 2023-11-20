@@ -14,7 +14,7 @@ export type QuestionData = {
 export type Question = {
     name: string;
     answerShort: QuestionAnswer;
-    answerLong: QuestionAnswer;
+    answerLong: QuestionAnswer | null;
 }
 
 export type QuestionAnswer = Array<string | QuestionCodeSnippet>;

@@ -49,7 +49,7 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
         <div className={currentQuestionId ? styles.listWrapper : styles.listWrapperFullWidth}>
             <Header/>
             <ul className={styles.list}>
-                {[...questions, ...questions].map(({name, detailsDocId}, index) => {
+                {questions.map(({name, detailsDocId}, index) => {
                     return <ListItem sx={{
                         padding: 0,
                         "a": {

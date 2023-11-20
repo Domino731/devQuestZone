@@ -49,8 +49,11 @@ export const Question = ({id}: QuestionProps) => {
         <Box sx={contentSX}>
             <Typography variant="h5" gutterBottom color="secondary">Short</Typography>
             <Answer answer={question.answerShort}/>
-            <Typography variant="h5" gutterBottom color="secondary">Long</Typography>
-            <Answer answer={question.answerLong}/>
+            {question.answerLong && <>
+                <Typography variant="h5" gutterBottom color="secondary">Long</Typography>
+                <Answer answer={question.answerLong}/>
+            </>}
+
         </Box>
     </Box>
 }

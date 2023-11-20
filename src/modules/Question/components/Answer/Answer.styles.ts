@@ -2,9 +2,50 @@ export const answerStyles = {
     fontSize: "100px",
     marginTop: "24px",
     color: 'text.secondary',
+
+    a: {
+        fontSize: '16px',
+        color: 'secondary.dark'
+    },
+    ul: {
+        marginTop: 0,
+        marginBottom: '0.4em',
+
+        li: {
+            marginBottom: '8px'
+        }
+    },
+
+
+    ol: {
+        marginTop: 0,
+        marginBottom: '8px',
+        li: {
+            marginBottom: '8px'
+        }
+    },
+
     ".text": {
         fontSize: "0.16em"
     },
+    ".text-white": {
+        color: 'white',
+    },
+
+    ".text-summary": {
+        marginTop: '20px',
+        paddingTop: '20px',
+        fontSize: '0.16em',
+        borderTop: '1px solid',
+        borderTopColor: 'text.secondary'
+    },
+    ".section-title": {
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        fontSize: "0.18em",
+        color: 'white',
+    },
+
     ".list-item-title": {
         color: "white",
         fontWeight: 'bold'
