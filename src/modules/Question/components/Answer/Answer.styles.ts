@@ -12,7 +12,8 @@ export const answerStyles = {
         marginBottom: '0.4em',
 
         li: {
-            marginBottom: '8px'
+            marginBottom: '8px',
+            fontSize: '16px'
         }
     },
 
@@ -21,7 +22,8 @@ export const answerStyles = {
         marginTop: 0,
         marginBottom: '8px',
         li: {
-            marginBottom: '8px'
+            marginBottom: '8px',
+            fontSize: '16px'
         }
     },
 
