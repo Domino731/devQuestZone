@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1520b14d-857d-4e7d-bf2a-8ecd65bbc907" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/SectionsList/components/SectionsListHeader/SectionsListHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/SectionsList/components/SectionsListHeader/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/QuestionsList/QuestionList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/QuestionsList/QuestionList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/SectionsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/SectionsList/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/SectionsList/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/Question.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/QuestionsList/store/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/QuestionsList/store/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/QuestionsList/store/slice.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/QuestionsList/store/slice.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,23 +33,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dominik/Desktop/projects/devQuestZone&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Dominik\\Desktop\\projects\\devQuestZone\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Dominik/Desktop/projects/devQuestZone",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Users\\Dominik\\Desktop\\projects\\devQuestZone\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dominik\Desktop\projects\devQuestZone\src\modules\QuestionsList" />
@@ -73,7 +72,9 @@
       <workItem from="1700299504297" duration="14946000" />
       <workItem from="1700326814291" duration="589000" />
       <workItem from="1700328298093" duration="1297000" />
-      <workItem from="1700390406279" duration="5232000" />
+      <workItem from="1700390406279" duration="5950000" />
+      <workItem from="1700407091942" duration="229000" />
+      <workItem from="1700499112442" duration="1176000" />
     </task>
     <servers />
   </component>

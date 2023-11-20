@@ -2,12 +2,6 @@ export const answerStyles = {
     fontSize: "100px",
     marginTop: "24px",
     color: 'text.secondary',
-    ".element": {
-        fontSize: "0.16em"
-    },
-    ".list": {
-        fontSize: "0.16em"
-    },
     ".text": {
         fontSize: "0.16em"
     },

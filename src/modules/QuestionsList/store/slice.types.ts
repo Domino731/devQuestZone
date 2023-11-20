@@ -13,7 +13,8 @@ export type QuestionData = {
 }
 export type Question = {
     name: string;
-    answer: QuestionAnswer
+    answerShort: QuestionAnswer;
+    answerLong: QuestionAnswer;
 }
 
 export type QuestionAnswer = Array<string | QuestionCodeSnippet>;
