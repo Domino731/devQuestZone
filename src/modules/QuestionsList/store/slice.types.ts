@@ -23,4 +23,5 @@ export type QuestionAnswer = Array<string | QuestionCodeSnippet>;
 export type QuestionCodeSnippet = {
     lang: AppLanguagesUnion;
     code: string;
+    className?: string
 }

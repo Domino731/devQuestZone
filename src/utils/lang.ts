@@ -1,6 +1,6 @@
 import {AVAILABLE_LANGS, AvailableLangsUnion} from "../App.const.ts";
 
-export const lang = (language: AvailableLangsUnion) => {
+export const getLangBgColor = (language: AvailableLangsUnion) => {
     // Color from language logo
     switch (language) {
         case "javascript":

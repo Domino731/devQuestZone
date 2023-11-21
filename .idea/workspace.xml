@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1520b14d-857d-4e7d-bf2a-8ecd65bbc907" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.const.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/Question.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/Question.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/Answer/Answer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Question/components/CodeSnippet/CodeSnippet.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getLangColor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/getLangColor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/QuestionsList/store/slice.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/QuestionsList/store/slice.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/lang.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/lang.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,7 @@
       <workItem from="1700499112442" duration="5059000" />
       <workItem from="1700583023990" duration="19000" />
       <workItem from="1700583631408" duration="7234000" />
-      <workItem from="1700593666231" duration="975000" />
+      <workItem from="1700593666231" duration="2256000" />
     </task>
     <servers />
   </component>

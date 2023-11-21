@@ -33,13 +33,29 @@ export const answerStyles = {
         marginLeft: '40px'
     },
 
+    '.padding-left-xxxl': {
+        paddingLeft: '40px'
+    },
+
     '.margin-bot-md': {
         marginTop: '4px'
+    },
+
+    '.padding-left-xl': {
+        paddingLeft: '20px'
     },
 
     '.list': {
         marginTop: '20px',
         marginBottom: '20px',
+        marginLeft: '40px'
+    },
+
+    '.no-top-margin': {
+        marginTop: '0 !important'
+    },
+    '.no-bot-margin': {
+        marginTop: '0 !important'
     },
 
     '.listItem': {
@@ -126,5 +142,8 @@ export const answerStyles = {
                 opacity: 0.6
             }
         }
+    },
+    '.nested-code-snippet-2': {
+        paddingLeft: '60px'
     }
 }
