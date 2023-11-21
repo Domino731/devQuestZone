@@ -65,7 +65,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
     }
 
     return <Box className={styles.container} bgcolor="primary.main">
-        <Header/>
+        <Header items={[{name: 'JavaScript sections', link: ''}]}/>
         <main className={styles.listWrapper}>
             <Container>
                 <ul className={styles.list}>

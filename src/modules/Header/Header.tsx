@@ -4,10 +4,12 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './styles.module.scss';
-import {Menu} from "./components/Menu/Menu.tsx";
 import {useNavigate} from "react-router";
+import {HeaderProps} from "./Header.types.ts";
+import {Link} from "react-router-dom";
+import {Fragment} from "react";
 
-export const Header = () => {
+export const Header = ({items}: HeaderProps) => {
     const navigate = useNavigate();
 
     return <AppBar position="static" color="primary" enableColorOnDark>
@@ -23,17 +25,14 @@ export const Header = () => {
                 <ArrowBackIcon/>
             </IconButton>
             <div className={styles.links}>
-                <a className={styles.link}>
-                    <Typography variant="body1" color="white">JavaScript</Typography>
-                </a>
-                <span className={styles.separator}>/</span>
-                {/*<div className={styles.menu}>*/}
-                <Menu/>
-                {/*</div>*/}
-
-                {/*<a className={styles.link}>*/}
-                {/*    <Typography variant="body1" color="white">What is class?</Typography>*/}
-                {/*</a>*/}
+                {items.map(({name, link}, index) => {
+                    return <Fragment key={`header-links-${index}`}>
+                        <Link to={link} key={`header-links-${index}`}>
+                            <Typography variant="body1" color="white">{name}</Typography>
+                        </Link>
+                        {index !== items.length - 1 && <span className={styles.separator}>/</span>}
+                    </Fragment>
+                })}
             </div>
         </Toolbar>
     </AppBar>
