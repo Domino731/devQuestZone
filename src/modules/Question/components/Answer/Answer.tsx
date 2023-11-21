@@ -5,11 +5,11 @@ import {answerStyles} from "./Answer.styles.ts";
 
 export const Answer = ({answer}: { answer: QuestionAnswer }) => {
     return <Box sx={answerStyles}>
-        {/*{answer.map((el, index) => {*/}
-        {/*    if (typeof el === 'string') {*/}
-        {/*        return <div dangerouslySetInnerHTML={{__html: el}} key={index}></div>;*/}
-        {/*    }*/}
-        {/*    return <CodeSnippet code={el.code} lang={el.lang} key={index}/>*/}
-        {/*})}*/}
+        {answer.map((el, index) => {
+            if (typeof el === 'string') {
+                return <div dangerouslySetInnerHTML={{__html: el}} key={index}></div>;
+            }
+            return <CodeSnippet code={el.code} lang={el.lang} key={index}/>
+        })}
     </Box>
 }

@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import {QuestionListProps} from "./QuestionList.types.ts";
 import {useLocation, useParams} from "react-router";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 import {useAppDispatch, useAppSelector} from "../../store.ts";
 import {questionListActions} from "./store/slice.actions.ts";
 import {separeteIds} from "../../utils/router.ts";
@@ -12,6 +12,10 @@ import {ListItem} from "@mui/material";
 import {Link} from "react-router-dom";
 import {Question} from "../Question";
 import {Header} from "../Header";
+import {sectionsListSelectors} from "../SectionsList/store/slice.selectors.ts";
+import {sectionListActions} from "../SectionsList/store/slice.actions.ts";
+import {APP_LINKS} from "../../App.const.ts";
+import {SectionListSubSectionData} from "../SectionsList/store/slice.types.ts";
 
 export const QuestionList = ({sectionKey}: QuestionListProps) => {
     const params = useParams();
@@ -20,36 +24,78 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
 
     const isLoading = useAppSelector(questionListSelectors.isLoading);
     const questions = useAppSelector(questionListSelectors.questions);
+    const sectionsIsLoading = useAppSelector(sectionsListSelectors.isLoading)[sectionKey];
+    const sectionsList = useAppSelector(sectionsListSelectors.sections)[sectionKey];
 
     const [currentQuestionId, setCurrentQuestionId] = useState<string | null>(null);
+
+    const [sectionId, questionListId] = separeteIds(params.id as string);
+
+    useEffect(() => {
+        if (!sectionsIsLoading && !sectionsList) {
+            console.log('fetchlog');
+            dispatch(sectionListActions.fetchSectionsList(sectionKey));
+        }
+    }, [dispatch, isLoading, sectionKey, sectionsIsLoading, sectionsList])
 
     useEffect(() => {
         // console.log(params);
         if (!isLoading && !questions) {
-            const [sectionId, questionListId] = separeteIds(params.id as string);
             dispatch(questionListActions.fetchSectionsList(sectionId, questionListId))
         }
-    }, [dispatch, isLoading, params.id, params.subSectionId, questions, sectionKey])
+    }, [dispatch, isLoading, params.id, params.subSectionId, questionListId, questions, sectionId, sectionKey])
 
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         setCurrentQuestionId(queryParams.get("questionId"));
     }, [location.search])
 
+
+    const getSubSections = useCallback((sectionId: string): Array<SectionListSubSectionData> | null => {
+        if (!sectionsList) return null;
+        return sectionsList.find(({docId}) => docId === sectionId)?.subSections ?? null;
+    }, [sectionsList]);
+
+    useEffect(() => {
+        const subSections = getSubSections(sectionId);
+        if (!subSections && sectionsList) {
+            dispatch(sectionListActions.fetchSubSectionsList(sectionKey, sectionId))
+        }
+    }, [dispatch, getSubSections, sectionId, sectionKey, sectionsList])
+
+
     const createQuestionLink = useCallback((detailsDocId: string) => {
         const {pathname} = location;
         return `${pathname}?questionId=${detailsDocId}`;
     }, [location])
 
-    console.log(questions);
+    const headerItems = useMemo(() => {
+        const payload = [{name: 'JavaScript sections', link: ''}];
 
-    if (!questions) {
+        if (sectionsList) {
+            const sectionList = sectionsList.find((el) => el.docId === sectionId);
+
+            if (sectionList) {
+                const {name, subSections} = sectionList;
+                const subSection = subSections?.find(el => el.docId === questionListId)?.name ?? '';
+                payload.push({name: `${name} - ${subSection}`, link: APP_LINKS.sectionsListJavascript});
+            }
+
+
+        }
+
+        return payload;
+    }, [questionListId, sectionId, sectionsList])
+
+
+    if (!questions || !sectionsList) {
         // TODO add loader
         return 'loading...'
     }
+
     return <Box bgcolor="primary.main" className={styles.container}>
         <div className={currentQuestionId ? styles.listWrapper : styles.listWrapperFullWidth}>
-            <Header/>
+            <Header items={headerItems}/>
             <ul className={styles.list}>
                 {questions.map(({name, detailsDocId}, index) => {
                     return <ListItem sx={{
