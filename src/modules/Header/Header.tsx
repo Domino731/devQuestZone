@@ -5,8 +5,11 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './styles.module.scss';
 import {Menu} from "./components/Menu/Menu.tsx";
+import {useNavigate} from "react-router";
 
 export const Header = () => {
+    const navigate = useNavigate();
+
     return <AppBar position="static" color="primary" enableColorOnDark>
         <Toolbar>
             <IconButton
@@ -15,7 +18,7 @@ export const Header = () => {
                 color="inherit"
                 aria-label="goBack"
                 title="go back"
-                onClick={() => alert('TODO: go back')}
+                onClick={() => navigate(-1)}
             >
                 <ArrowBackIcon/>
             </IconButton>
