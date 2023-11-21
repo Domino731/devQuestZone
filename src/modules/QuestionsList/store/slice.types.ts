@@ -15,6 +15,7 @@ export type Question = {
     name: string;
     answerShort: QuestionAnswer;
     answerLong: QuestionAnswer | null;
+    id: string;
 }
 
 export type QuestionAnswer = Array<string | QuestionCodeSnippet>;

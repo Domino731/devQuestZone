@@ -23,10 +23,12 @@ const fetchQuestion = async (sectionId: string, questionListId: string, question
 
     if (docSnap.exists()) {
         const {name, answerShort, answerLong} = docSnap.data();
+        console.log(docSnap.data());
         payload = {
             name,
             answerShort,
-            answerLong: answerLong ?? null
+            answerLong: answerLong ?? null,
+            id: docSnap.id
         }
     } else {
         console.log("No such document!");

@@ -2,8 +2,6 @@ import styles from "./styles.module.scss"
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import {CodeSnippet} from "./components/CodeSnippet/CodeSnippet.tsx";
-import {exampleCode} from "./Question.const.ts";
 import {getLangColor} from "../../utils/getLangColor.ts";
 import {QuestionProps} from "./Question.types.ts";
 import {useParams} from "react-router";
@@ -23,19 +21,21 @@ export const Question = ({id}: QuestionProps) => {
     const question = useAppSelector(questionListSelectors.question);
 
     useEffect(() => {
-        // if (!question && !questionIsLoading) {
-        const [sectionId, questionListId] = separeteIds(params.id as string);
-        dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
-        // }
-    }, [])
+        // TODO move upper to prevent multiple api calls
+        if ((!question && !questionIsLoading) || question?.id !== id) {
+            console.log('fetch');
+            const [sectionId, questionListId] = separeteIds(params.id as string);
+            dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
+        }
+    }, [dispatch, id, params.id, question, questionIsLoading])
 
     if (questionIsLoading) {
         // TODO all loader
-        return 'loading...'
+        return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>Loading...</Box>
     }
     if (!question) {
         // TODO add 404 view
-        return '404 error'
+        return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>404</Box>
     }
 
 

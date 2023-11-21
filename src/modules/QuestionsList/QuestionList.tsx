@@ -48,7 +48,7 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
     useEffect(() => {
         const queryParams = new URLSearchParams(location.search);
         setCurrentQuestionId(queryParams.get("questionId"));
-    }, [location.search])
+    }, [location])
 
 
     const getSubSections = useCallback((sectionId: string): Array<SectionListSubSectionData> | null => {
