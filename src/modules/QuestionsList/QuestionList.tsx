@@ -41,6 +41,8 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
         return `${pathname}?questionId=${detailsDocId}`;
     }, [location])
 
+    console.log(questions);
+
     if (!questions) {
         // TODO add loader
         return 'loading...'

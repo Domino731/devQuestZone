@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './styles.module.scss';
+import {Menu} from "./components/Menu/Menu.tsx";
 
 export const Header = () => {
     return <AppBar position="static" color="primary" enableColorOnDark>
@@ -23,9 +24,13 @@ export const Header = () => {
                     <Typography variant="body1" color="white">JavaScript</Typography>
                 </a>
                 <span className={styles.separator}>/</span>
-                <a className={styles.link}>
-                    <Typography variant="body1" color="white">What is class?</Typography>
-                </a>
+                {/*<div className={styles.menu}>*/}
+                <Menu/>
+                {/*</div>*/}
+
+                {/*<a className={styles.link}>*/}
+                {/*    <Typography variant="body1" color="white">What is class?</Typography>*/}
+                {/*</a>*/}
             </div>
         </Toolbar>
     </AppBar>
