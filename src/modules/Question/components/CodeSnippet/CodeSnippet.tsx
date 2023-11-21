@@ -5,7 +5,7 @@ import html from 'highlight.js/lib/languages/html';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {dracula} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Box from "@mui/material/Box";
-import {getLangColor, getLangHeaderTextColor} from "../../../../utils/getLangColor.ts";
+import {lang, getLangHeaderTextColor, getlangText} from "../../../../utils/lang.ts";
 import Typography from "@mui/material/Typography";
 import {ContentCopy} from "@mui/icons-material";
 import IconButton from '@mui/material/IconButton';
@@ -32,9 +32,14 @@ export const CodeSnippet = ({code, lang}: CodeSnippetProps) => {
 
     return (
         <div className={styles.container}>
-            <Box sx={{backgroundColor: getLangColor(lang)}} className={styles.header}>
+            <Box sx={{backgroundColor: lang(lang)}} className={styles.header}>
                 <Typography variant="subtitle2"
-                            sx={{color: getLangHeaderTextColor(lang)}}>JavaScript</Typography>
+                            sx={{
+                                color: getLangHeaderTextColor(lang),
+                                fontWeight: 'bold',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.08em'
+                            }}>{getlangText(lang)}</Typography>
                 <IconButton
                     sx={{color: getLangHeaderTextColor(lang), fontSize: '18px'}}
                     onClick={handleCopyCode}

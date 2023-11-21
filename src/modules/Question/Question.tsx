@@ -2,7 +2,7 @@ import styles from "./styles.module.scss"
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import {getLangColor} from "../../utils/getLangColor.ts";
+import {lang} from "../../utils/lang.ts";
 import {QuestionProps} from "./Question.types.ts";
 import {useParams} from "react-router";
 import {useEffect} from "react";
@@ -31,15 +31,15 @@ export const Question = ({id}: QuestionProps) => {
 
     if (questionIsLoading) {
         // TODO all loader
-        return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>Loading...</Box>
+        return <Box borderLeft={`1px solid ${lang('javascript')}`} className={styles.container}>Loading...</Box>
     }
     if (!question) {
         // TODO add 404 view
-        return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>404</Box>
+        return <Box borderLeft={`1px solid ${lang('javascript')}`} className={styles.container}>404</Box>
     }
 
 
-    return <Box borderLeft={`1px solid ${getLangColor('javascript')}`} className={styles.container}>
+    return <Box borderLeft={`1px solid ${lang('javascript')}`} className={styles.container}>
         <header>
             <Typography variant="h4" gutterBottom>
                 {question.name}

@@ -10,3 +10,13 @@ export const APP_LINKS = {
         return `/sections-list-javascript/${sectionId}-${questionListId}`
     }
 }
+
+export enum AVAILABLE_LANGS {
+    javascript = 'javascript',
+    html = 'html',
+    css = 'css',
+    react = 'react',
+    java = 'java'
+}
+
+export type AvailableLangsUnion = keyof typeof AVAILABLE_LANGS;
