@@ -122,6 +122,8 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
                                 fontSize: '16px',
                                 height: '24px',
                                 width: '24px',
+                                minHeight: '24px',
+                                minWidth: '24px',
                                 backgroundColor: detailsDocId === currentQuestionId ? 'secondary.light' : 'primary.light',
                                 borderRadius: '4px',
                                 marginRight: '12px',
