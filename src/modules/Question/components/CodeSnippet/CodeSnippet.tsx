@@ -1,6 +1,7 @@
 import hljs from 'highlight.js';
 import styles from "./styles.module.scss";
 import javascript from 'highlight.js/lib/languages/javascript';
+import html from 'highlight.js/lib/languages/html';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {dracula} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Box from "@mui/material/Box";
@@ -13,6 +14,7 @@ import {CodeSnippetProps} from "./CodeSnippet.types.ts";
 
 
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('html', javascript);
 
 /** Component with header and highlighted code
  * @Param code - code that you want to display

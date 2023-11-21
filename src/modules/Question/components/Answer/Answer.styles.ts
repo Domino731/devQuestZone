@@ -17,6 +17,35 @@ export const answerStyles = {
         }
     },
 
+    '.margin-top-sm': {
+        marginTop: '4px'
+    },
+
+    '.margin-bot-sm': {
+        marginTop: '4px'
+    },
+
+    '.margin-top-md': {
+        marginTop: '4px'
+    },
+
+    '.margin-left-xxxl': {
+        marginLeft: '40px'
+    },
+
+    '.margin-bot-md': {
+        marginTop: '4px'
+    },
+
+    '.list': {
+        marginTop: '20px',
+        marginBottom: '20px',
+    },
+
+    '.listItem': {
+        marginBottom: '8px',
+        fontSize: '16px'
+    },
 
     ol: {
         marginTop: 0,
@@ -32,6 +61,9 @@ export const answerStyles = {
     },
     ".text-white": {
         color: 'white',
+    },
+    ".text-bold": {
+        fontWeight: 'bold'
     },
 
     ".text-summary": {
@@ -59,6 +91,7 @@ export const answerStyles = {
         fontSize: "16px"
     },
 
+
     ".code": {
         background: '#2F3A46',
         color: "white",
@@ -67,6 +100,16 @@ export const answerStyles = {
         borderRadius: "0.4em",
         border: "1px solid  #3B4A59"
     },
+    code: {
+        background: '#2F3A46',
+        color: "white",
+        fontSize: "1em",
+        padding: "0.1em 0.4em",
+        borderRadius: "0.4em",
+        border: "1px solid  #3B4A59"
+    },
+
+
     ".code-link": {
         background: '#2F3A46',
         color: "white",
