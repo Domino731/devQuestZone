@@ -31,10 +31,15 @@ export const questionListSlice = createSlice({
             state.question = action.payload;
         },
 
+        clearQuestion: (state) => {
+            state.question = initialState.question;
+        },
+
         resetState: (state) => {
             state.questions = initialState.questions;
             state.isLoading = initialState.isLoading;
         }
+
     },
 })
 

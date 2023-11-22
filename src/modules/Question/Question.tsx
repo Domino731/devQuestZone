@@ -4,8 +4,8 @@ import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import {getLangBgColor} from "../../utils/lang.ts";
 import {QuestionProps} from "./Question.types.ts";
-import {useParams} from "react-router";
-import {useEffect} from "react";
+import {useLocation, useNavigate, useParams} from "react-router";
+import {useCallback, useEffect} from "react";
 import {separeteIds} from "../../utils/router.ts";
 import {questionListActions} from "../QuestionsList/store/slice.actions.ts";
 import {useAppDispatch, useAppSelector} from "../../store.ts";
@@ -14,9 +14,14 @@ import {questionListSelectors} from "../QuestionsList/store/slice.selectors.ts";
 import {Answer} from "./components/Answer";
 import {Loader} from "../../components/Loader";
 import {Error404} from "../../components/Error404";
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from "@mui/material/IconButton";
+import {questionListSliceActions} from "../QuestionsList/store/slice.ts";
 
 export const Question = ({id}: QuestionProps) => {
     const params = useParams();
+    const location = useLocation();
+    const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
     const questionIsLoading = useAppSelector(questionListSelectors.questionIsLoading);
@@ -30,6 +35,15 @@ export const Question = ({id}: QuestionProps) => {
             dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
     }, [dispatch, id, params.id, question, questionIsLoading])
+
+
+    const handleClose = useCallback(() => {
+        const searchParams = new URLSearchParams(location.search);
+        searchParams.delete('questionId');
+        const newUrl = `${location.pathname}?${searchParams.toString()}`;
+        navigate(newUrl);
+        dispatch(questionListSliceActions.clearQuestion());
+    }, [dispatch, location.pathname, location.search, navigate]);
 
 
     if (questionIsLoading) {
@@ -47,6 +61,11 @@ export const Question = ({id}: QuestionProps) => {
 
 
     return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`} className={styles.container}>
+        <div className={styles.topBar}>
+            <IconButton onClick={handleClose} size="large">
+                <CloseIcon/>
+            </IconButton>
+        </div>
         <header>
             <Typography variant="h4" gutterBottom>
                 {question.name}

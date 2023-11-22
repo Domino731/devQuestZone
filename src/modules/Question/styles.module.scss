@@ -4,17 +4,20 @@
   height: 100vh;
   overflow: auto;
   background: #101418;
-  padding: 24px;
-
-  .title {
-
-  }
+  padding: 0 24px 24px;
 
   p {
     margin: 0;
   }
 }
 
+.topBar {
+  // same as <Header/>
+  height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .margin-vertical {
   margin-top: 16px !important;
