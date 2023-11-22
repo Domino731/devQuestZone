@@ -13,6 +13,7 @@ import {contentSX} from "./Question.styles.ts";
 import {questionListSelectors} from "../QuestionsList/store/slice.selectors.ts";
 import {Answer} from "./components/Answer";
 import {Loader} from "../../components/Loader";
+import {Error404} from "../../components/Error404";
 
 export const Question = ({id}: QuestionProps) => {
     const params = useParams();
@@ -29,6 +30,8 @@ export const Question = ({id}: QuestionProps) => {
             dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
     }, [dispatch, id, params.id, question, questionIsLoading])
+
+    return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`} className={styles.container}><Error404/></Box>
 
     if (questionIsLoading) {
         // TODO all loader
