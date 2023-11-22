@@ -12,6 +12,7 @@ import {useAppDispatch, useAppSelector} from "../../store.ts";
 import {contentSX} from "./Question.styles.ts";
 import {questionListSelectors} from "../QuestionsList/store/slice.selectors.ts";
 import {Answer} from "./components/Answer";
+import {Loader} from "../../components/Loader";
 
 export const Question = ({id}: QuestionProps) => {
     const params = useParams();
@@ -32,7 +33,9 @@ export const Question = ({id}: QuestionProps) => {
     if (questionIsLoading) {
         // TODO all loader
         return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`}
-                    className={styles.container}>Loading...</Box>
+                    className={styles.container}>
+            <Loader/>
+        </Box>
     }
     if (!question) {
         // TODO add 404 view
