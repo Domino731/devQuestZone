@@ -28,13 +28,11 @@ export const Question = ({id}: QuestionProps) => {
     const question = useAppSelector(questionListSelectors.question);
 
     useEffect(() => {
-        // TODO move upper to prevent multiple api calls
         if ((!question && !questionIsLoading) || question?.id !== id) {
-            console.log('fetch');
             const [sectionId, questionListId] = separeteIds(params.id as string);
             dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
-    }, [dispatch, id, params.id, question, questionIsLoading])
+    }, [])
 
 
     const handleClose = useCallback(() => {
@@ -56,7 +54,16 @@ export const Question = ({id}: QuestionProps) => {
     if (!question) {
         // TODO add 404 view
         return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`}
-                    className={styles.container}><Error404/></Box>
+                    className={styles.container}>
+            <div className={styles.topBar}>
+                <IconButton onClick={handleClose} size="large">
+                    <CloseIcon/>
+                </IconButton>
+            </div>
+            <div className={styles.errorWrapper}>
+                <Error404 errorText="Question not found"/>
+            </div>
+        </Box>
     }
 
 
