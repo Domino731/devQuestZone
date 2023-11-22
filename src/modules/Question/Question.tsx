@@ -31,7 +31,6 @@ export const Question = ({id}: QuestionProps) => {
         }
     }, [dispatch, id, params.id, question, questionIsLoading])
 
-    return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`} className={styles.container}><Error404/></Box>
 
     if (questionIsLoading) {
         // TODO all loader
@@ -42,7 +41,8 @@ export const Question = ({id}: QuestionProps) => {
     }
     if (!question) {
         // TODO add 404 view
-        return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`} className={styles.container}>404</Box>
+        return <Box borderLeft={`1px solid ${getLangBgColor('javascript')}`}
+                    className={styles.container}><Error404/></Box>
     }
 
 
