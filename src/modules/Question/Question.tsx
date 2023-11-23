@@ -28,11 +28,12 @@ export const Question = ({id}: QuestionProps) => {
     const question = useAppSelector(questionListSelectors.question);
 
     useEffect(() => {
-        if ((!question && !questionIsLoading) || question?.id !== id) {
+        if (!questionIsLoading || params.id !== question?.id) {
+
             const [sectionId, questionListId] = separeteIds(params.id as string);
             dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
-    }, [])
+    }, [params])
 
 
     const handleClose = useCallback(() => {
