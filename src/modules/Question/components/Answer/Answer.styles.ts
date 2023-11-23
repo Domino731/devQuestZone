@@ -73,15 +73,6 @@ export const answerStyles = {
         fontSize: '16px'
     },
 
-    ol: {
-        marginTop: 0,
-        marginBottom: '8px',
-        li: {
-            marginBottom: '8px',
-            fontSize: '16px'
-        }
-    },
-
     ".text": {
         fontSize: "0.16em"
     },

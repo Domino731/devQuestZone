@@ -12,6 +12,8 @@ const fetchQuestionList = async (sectionId: string, questionListId: string) => {
             detailsDocId: doc.data().detailsDocId
         })
     });
+    payload.sort((a, b) => Number(a.detailsDocId) - Number(b.detailsDocId))
+
     return payload;
 }
 
@@ -23,7 +25,7 @@ const fetchQuestion = async (sectionId: string, questionListId: string, question
 
     if (docSnap.exists()) {
         const {name, answerShort, answerLong} = docSnap.data();
-        console.log(docSnap.data());
+
         payload = {
             name,
             answerShort,
