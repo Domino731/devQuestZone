@@ -17,6 +17,16 @@ export const answerStyles = {
         }
     },
 
+    ol: {
+        marginTop: 0,
+        marginBottom: '0.4em',
+
+        li: {
+            marginBottom: '8px',
+            fontSize: '16px'
+        }
+    },
+
     '.margin-top-sm': {
         marginTop: '4px'
     },
@@ -26,7 +36,7 @@ export const answerStyles = {
     },
 
     '.margin-top-md': {
-        marginTop: '4px'
+        marginTop: '8px'
     },
 
     '.margin-left-xxxl': {

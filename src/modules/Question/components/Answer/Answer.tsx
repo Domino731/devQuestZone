@@ -14,6 +14,35 @@ export const Answer = ({answer}: { answer: QuestionAnswer }) => {
             }
             return <CodeSnippet code={el.code} lang={el.lang} key={index} className={el.className}/>
         })}
+
+        <p>There are limitations on the length of JavaScript variable names. Variable names in JavaScript must adhere to
+            the following rules:</p>
+        <ol>
+
+        </ol>
+
+        Variable names can include letters (both uppercase and lowercase), digits, underscores (_), and dollar signs
+        ($).
+
+        The first character of a variable name must be a letter, an underscore (_), or a dollar sign ($). It cannot be a
+        digit.
+
+        Variable names are case-sensitive, so "myVariable" and "myvariable" would be treated as two different variables.
+
+        JavaScript variable names should not use reserved keywords. Reserved keywords are words that have special
+        meanings in JavaScript, and you cannot use them as variable names. Examples of reserved keywords include if,
+        else, for, while, function, and so on.
+
+        There is no strict limitation on the length of variable names in JavaScript defined by the language
+        specification. However, practical limitations may exist due to factors like code readability and browser
+        compatibility. It's generally a good practice to keep variable names reasonably short and descriptive to make
+        your code more understandable.
+
+        While there's no specific maximum length for variable names defined in the JavaScript language specification,
+        it's advisable to follow best practices and maintain code readability by using meaningful and concise variable
+        names. Extremely long variable names can make your code less readable and harder to maintain.
+
+
         {/*<p class="text">Running JavaScript can be done in various environments, depending on your use case. Here are a*/}
         {/*    few common ways to run JavaScript</p>*/}
 
