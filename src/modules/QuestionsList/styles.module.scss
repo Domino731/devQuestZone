@@ -1,4 +1,6 @@
-.container {
+$animation-duration-time: 2s;
+
+.listContainer {
   width: 100%;
   //width: 50%;
   height: 100vh;
@@ -6,12 +8,23 @@
   justify-content: center;
 }
 
+.answerContainer {
+  width: 0%;
+  animation-name: answerContainerAnimation;
+  animation-duration: $animation-duration-time;
+  animation-fill-mode: forwards;
+}
+
 .listWrapper {
-  width: 50%;
+  width: 100%;
+  animation-name: listWrapperAnimation;
+  animation-duration: $animation-duration-time;
+  animation-fill-mode: forwards;
 }
 
 .listWrapperFullWidth {
-  width: 100%;
+  //width: 100%;
+
 }
 
 .list {
@@ -26,4 +39,23 @@
 
 .listItemContent {
   padding: 10px;
+}
+
+
+@keyframes listWrapperAnimation {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes answerContainerAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
 }

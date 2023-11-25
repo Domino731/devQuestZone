@@ -93,8 +93,8 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
         return 'loading...'
     }
 
-    return <Box bgcolor="primary.main" className={styles.container}>
-        <div className={currentQuestionId ? styles.listWrapper : styles.listWrapperFullWidth}>
+    return <Box bgcolor="primary.main" className={styles.listContainer}>
+        <div className={styles.listWrapper}>
             <Header items={headerItems}/>
             <ul className={styles.list}>
                 {questions.map(({name, detailsDocId}, index) => {
@@ -140,7 +140,7 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
                 })}
             </ul>
         </div>
-        {currentQuestionId && <Question id={currentQuestionId}/>}
+        {currentQuestionId && <div className={styles.answerContainer}><Question id={currentQuestionId}/></div>}
 
     </Box>
 }
