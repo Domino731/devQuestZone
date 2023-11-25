@@ -9,21 +9,23 @@ $animation-duration-time: 2s;
 }
 
 .answerContainer {
-  width: 0%;
-  animation-name: answerContainerAnimation;
-  animation-duration: $animation-duration-time;
-  animation-fill-mode: forwards;
+  width: 50%;
+  // TODo
+  //animation-name: answerContainerAnimation;
+  //animation-duration: $animation-duration-time;
+  //animation-fill-mode: forwards;
 }
 
 .listWrapper {
-  width: 100%;
-  animation-name: listWrapperAnimation;
-  animation-duration: $animation-duration-time;
-  animation-fill-mode: forwards;
+  width: 50%;
+  // todo
+  //animation-name: listWrapperAnimation;
+  //animation-duration: $animation-duration-time;
+  //animation-fill-mode: forwards;
 }
 
 .listWrapperFullWidth {
-  //width: 100%;
+  width: 100%;
 
 }
 

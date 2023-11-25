@@ -51,6 +51,17 @@ export const answerStyles = {
         marginTop: '4px'
     },
 
+    '.margin-bot-xxxl': {
+        marginBottom: '40px'
+    },
+
+    '.margin-bot-xl': {
+        marginBottom: '20px'
+    },
+    '.margin-top-xl': {
+        marginTop: '20px'
+    },
+
     '.padding-left-xl': {
         paddingLeft: '20px'
     },
@@ -146,5 +157,8 @@ export const answerStyles = {
     },
     '.nested-code-snippet-2': {
         paddingLeft: '60px'
+    },
+    '.nested-code-snippet-1': {
+        paddingLeft: '40px'
     }
 }

@@ -13,7 +13,6 @@ const fetchQuestionList = async (sectionId: string, questionListId: string) => {
         })
     });
     payload.sort((a, b) => Number(a.detailsDocId) - Number(b.detailsDocId))
-    console.log(payload);
     return payload;
 }
 

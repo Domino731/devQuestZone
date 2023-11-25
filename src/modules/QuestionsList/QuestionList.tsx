@@ -94,7 +94,7 @@ export const QuestionList = ({sectionKey}: QuestionListProps) => {
     }
 
     return <Box bgcolor="primary.main" className={styles.listContainer}>
-        <div className={styles.listWrapper}>
+        <div className={!currentQuestionId ? styles.listWrapperFullWidth : styles.listWrapper}>
             <Header items={headerItems}/>
             <ul className={styles.list}>
                 {questions.map(({name, detailsDocId}, index) => {

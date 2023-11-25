@@ -28,13 +28,13 @@ export const Question = ({id}: QuestionProps) => {
     const question = useAppSelector(questionListSelectors.question);
 
     useEffect(() => {
-        if (!questionIsLoading || params.id !== question?.id) {
-
+        if (!questionIsLoading) {
+            console.log('fetch');
             const [sectionId, questionListId] = separeteIds(params.id as string);
             dispatch(questionListActions.fetchQuestion(sectionId, questionListId, id));
         }
-    }, [params])
-
+    }, [id])
+    
 
     const handleClose = useCallback(() => {
         const searchParams = new URLSearchParams(location.search);

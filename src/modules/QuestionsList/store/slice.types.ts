@@ -18,7 +18,7 @@ export type Question = {
     id: string;
 }
 
-export type QuestionAnswer = Array<string | QuestionCodeSnippet>;
+export type QuestionAnswer = Array<string | QuestionCodeSnippet> | string;
 
 export type QuestionCodeSnippet = {
     lang: AppLanguagesUnion;
