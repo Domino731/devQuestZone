@@ -3,10 +3,11 @@ import Typography from "@mui/material/Typography";
 import {homePageSections} from "./HomePage.const.ts";
 import {Link} from "react-router-dom";
 import styles from "./styles.module.scss";
-import {Container, List, ListItem} from "@mui/material";
+import {Container} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {sx} from "./HomePage.styles.ts";
 
+/** Home page component - contains list with all available languages in app */
 export const HomePage = () => {
     return <Box bgcolor="primary.main" sx={sx.container}>
         <header>
