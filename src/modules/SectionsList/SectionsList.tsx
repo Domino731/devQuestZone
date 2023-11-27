@@ -15,6 +15,7 @@ import {Link} from "react-router-dom";
 import {APP_LINKS} from "../../App.const.ts";
 import {Header} from "../Header";
 import Box from "@mui/material/Box";
+import {Loader} from "../../components/Loader";
 
 export const SectionsList = ({sectionKey}: SectionListProps) => {
     const dispatch = useAppDispatch();
@@ -60,8 +61,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
     }, [getSubSections])
 
     if (!sectionsList) {
-        // TODO loader
-        return 'loading...'
+        return <Loader/>
     }
 
     return <Box className={styles.container} bgcolor="primary.main">
@@ -70,7 +70,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
             <Container>
                 <ul className={styles.list}>
                     {sectionsList.map(({name, docId}) => <li className={styles.listItem} key={docId}>
-                        <Accordion>
+                        <Accordion expanded={false}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon/>}
                                 aria-controls="panel1a-content"
