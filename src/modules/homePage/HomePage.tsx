@@ -8,10 +8,10 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {sx} from "./HomePage.styles.ts";
 
 export const HomePage = () => {
-    return <Box bgcolor="primary.main" className={styles.container}>
+    return <Box bgcolor="primary.main" sx={sx.container}>
         <header>
-            <Typography variant="h1" align="center">DEV_QUEST_ZONE</Typography>
-            <Typography variant="h4" align="center" className={styles.description}>Enhance your skills, face challenges,
+            <Typography variant="h1" align="center" sx={sx.title}>DEV_QUEST_ZONE</Typography>
+            <Typography variant="h4" align="center" sx={sx.description}>Enhance your skills, face challenges,
                 and develop yourself as a
                 programmer at every level of expertise!</Typography>
         </header>
