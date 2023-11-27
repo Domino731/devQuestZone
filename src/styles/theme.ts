@@ -9,5 +9,8 @@ export const darkTheme = createTheme({
         secondary: {
             main: '#00bbf9'
         },
+        third: {
+            main: '#1e1e1e'
+        }
     },
 });
