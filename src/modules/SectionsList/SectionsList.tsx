@@ -45,7 +45,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
         const data = getSubSections(sectionId);
         if (!data) {
             // TODO loader
-            return 'loading...'
+            return <Loader/>
         }
         return <List>
             {data.map(({name, docId}) => <ListItem sx={{
@@ -70,6 +70,7 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
             <Container>
                 <ul className={styles.list}>
                     {sectionsList.map(({name, docId}) => <li className={styles.listItem} key={docId}>
+                        // TODO: fix accordion
                         <Accordion expanded={false}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon/>}
