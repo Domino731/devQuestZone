@@ -70,7 +70,6 @@ export const SectionsList = ({sectionKey}: SectionListProps) => {
             <Container>
                 <ul className={styles.list}>
                     {sectionsList.map(({name, docId}) => <li className={styles.listItem} key={docId}>
-                        // TODO: fix accordion
                         <Accordion expanded={false}>
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon/>}
